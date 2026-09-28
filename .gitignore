@@ -1,0 +1,7 @@
+my_notes/
+data/raw/
+test_env/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.fif
