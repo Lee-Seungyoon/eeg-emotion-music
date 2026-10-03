@@ -34,7 +34,8 @@ if uploaded: # run only if a file is uploaded
     missing = set(model.feature_names_in_) - set(df.columns)
 
     if missing:
-        st.error(f"{len(missing)} are missing (e.g. {list(missing)[:3]})." "Please use the same format as the birdy654 Kaggle EEG emotion dataset.")
+        st.error(f"{len(missing)} columns are missing. This doesn't look like a supported EEG feature file. "
+                 "Please use the same format as the birdy654 Kaggle EEG emotion dataset.")
         st.stop()
 
     x = log_transform(df[model.feature_names_in_])
